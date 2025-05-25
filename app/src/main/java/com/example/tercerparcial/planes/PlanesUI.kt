@@ -20,8 +20,10 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.Favorite
@@ -71,11 +73,13 @@ fun PlanesScreen(viewModel: PlanesViewModel = hiltViewModel(), onSuccess : () ->
 
     val context = LocalContext.current
     var indiceAnterior = 0
+    val scrollState = rememberScrollState()
 
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .padding(20.dp, 40.dp, 20.dp, 30.dp),
+            .padding(20.dp, 40.dp, 20.dp, 30.dp)
+            .verticalScroll(scrollState),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
     ) {
@@ -219,7 +223,6 @@ fun PlanesScreen(viewModel: PlanesViewModel = hiltViewModel(), onSuccess : () ->
 
                     Spacer(Modifier.height(15.dp))
 
-                    // Simulación de íconos sociales
                     Row(
                         modifier = Modifier
                             .fillMaxWidth()

@@ -42,7 +42,6 @@ android {
 }
 
 dependencies {
-
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
@@ -78,6 +77,8 @@ dependencies {
     //maps
     implementation("com.google.maps.android:maps-compose:1.0.0")
     implementation("com.google.android.gms:play-services-maps:18.0.2")
+
+    implementation(libs.fontawesome.compose)
 
     implementation(project(":usecases"))
     implementation(project(":domain"))

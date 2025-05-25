@@ -24,6 +24,8 @@ composeFoundation = "1.6.7"
 ksp = "2.0.0-1.0.24"
 hilt = "2.55"
 
+compose-icons = "1.1.0"
+
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -58,6 +60,8 @@ androidx-compose-foundation = { group = "androidx.compose.foundation", name = "f
 hilt = { group = "com.google.dagger", name = "hilt-android", version.ref="hilt"}
 hilt-compiler = {group = "com.google.dagger", name = "hilt-compiler", version.ref="hilt"}
 hilt-test = { group = "com.google.dagger", name = "hilt-android-testing", version.ref="hilt"}
+
+fontawesome-compose = { module = "br.com.devsrsouza.compose.icons.jetbrains:font-awesome", version.ref = "compose-icons" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
